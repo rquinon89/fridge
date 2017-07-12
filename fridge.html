@@ -64,8 +64,18 @@
 
       for (var i = letters.length - 1; i >= 0; i--) {
         letters[i]
+
         var letterBtn = $("<button>");
+
+        letterBtn.addClass( "letter-button letter letter-button-color" ) 
+
+        letterBtn.attr("data-letter", letters[i]);
+
+        letterBtn.text(letters[i]);
+
+        $("#buttons").append(letterBtn);
       }
+
 
 
       // MAJOR TASK #1: DYNAMICALLY CREATE BUTTONS
